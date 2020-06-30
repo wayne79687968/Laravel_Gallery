@@ -1,4 +1,4 @@
-    <section class="site-section-hero bg-image" style="background-image: url('images/img_9.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
+    <section class="site-section-hero bg-image " style="background-image: url('{{ asset('images/DSC_4084.jpg') }}');"  data-stellar-background-ratio="0.5" id="section-home">
       <div class="row justify-content-center align-items-center">
         <div class="col-md-7 text-center">
           <h1 class="text-white heading text-uppercase" data-aos="fade-up">Welcome</h1>
