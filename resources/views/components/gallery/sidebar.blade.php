@@ -1,6 +1,6 @@
   <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
     <div class="site-logo">
-      <a href="index.html">Skogkatt Photo</a>
+      <a href="{{ route('admin.index') }}">Skogkatt Photo</a>
     </div>
 
     <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>

@@ -1,3 +1,3 @@
-<x-home-master>
+<x-gallery.home-master>
 
-</x-home-master>
+</x-gallery.home-master>

@@ -38,29 +38,29 @@
     </div>
 
     {{-- Sidebar --}}
-    <x-sidebar></x-sidebar>
+    <x-gallery.sidebar></x-gallery.sidebar>
 
     <main class="main-content">
 
       {{-- Main --}}
-      <x-main></x-main>
+      <x-gallery.main></x-gallery.main>
 
       <div class="container-fluid">
 
         {{-- Gallery --}}
-        <x-gallery></x-gallery>
+        <x-gallery.gallery></x-gallery.gallery>
 
         {{-- Testimonial --}}
-        <x-testimonial></x-testimonial>
+        <x-gallery.testimonial></x-gallery.testimonial>
 
         {{-- Biography --}}
-        <x-biography></x-biography>
+        <x-gallery.biography></x-gallery.biography>
 
         {{-- Blog --}}
-        <x-blog></x-blog>
+        <x-gallery.blog></x-gallery.blog>
 
         {{-- Contact --}}
-        <x-contact></x-contact>
+        <x-gallery.contact></x-gallery.contact>
 
         {{-- Footer --}}
         {{-- <x-footer></x-footer> --}}
@@ -70,7 +70,7 @@
 
   </div> <!-- .site-wrap -->
 
-  <x-script></x-script>
+  <x-gallery.script></x-gallery.script>
 
   </body>
 </html>
