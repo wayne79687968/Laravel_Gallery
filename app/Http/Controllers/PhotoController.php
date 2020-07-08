@@ -41,7 +41,7 @@ class PhotoController extends Controller
         {
             $output .= '
             <div class="col-md-2" style="margin-bottom:16px;" align="center">
-                <img src="' . asset("storage/" . $image->path . '" class="img-thumbnail" width="175" height="175" style="height:175px;" />
+                <img src="' . asset("storage/" . $image->path) . '" class="img-thumbnail" width="175" height="175" style="height:175px;" />
                 <button type="button" class="btn btn-link remove_image" id="' . $image->id .'">Remove</button>
             </div>
             ';
