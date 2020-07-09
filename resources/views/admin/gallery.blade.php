@@ -16,33 +16,23 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Id</th>
+                        <th>Path</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Id</th>
+                        <th>Path</th>
                     </tr>
                 </tfoot>
                 <tbody>
+                    @foreach ($images as $image)
                     <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
+                        <td>{{$image->id}}</td>
+                        <td><img src="{{ asset('storage/' . $image->path) }}" alt="" height="175"></td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
