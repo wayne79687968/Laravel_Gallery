@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Photo;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManager;
 
 class PhotoController extends Controller
 {
     public function index()
     {
         return view('admin.gallery',[
-            'photos' => Photo::all(),
+            'images' => Photo::all(),
         ]);
     }
 
@@ -24,13 +25,13 @@ class PhotoController extends Controller
     public function upload(Request $request)
     {
         $image = $request->file('file');
-        $imageName = time() . '.' . $image->extension();
-        $image->storeAs('uploads', $imageName, 'public');
+        $imagePath = time() . '.' . $image->extension();
         Photo::create([
-            'path' => 'uploads/' . $imageName,
+            'path' => 'uploads/' . $imagePath,
         ]);
 
-        return response()->json(['success' => $imageName]);
+        $image->storeAs('uploads', $imagePath, 'public');
+        return response()->json(['success' => $imagePath]);
     }
 
     public function fetch()
@@ -41,7 +42,7 @@ class PhotoController extends Controller
         {
             $output .= '
             <div class="col-md-2" style="margin-bottom:16px;" align="center">
-                <img src="' . asset("storage/" . $image->path) . '" class="img-thumbnail" width="175" height="175" style="height:175px;" />
+                <img src="' . asset("storage/" . $image->path) . '" class="img-thumbnail" height="175" style="height:175px;" />
                 <button type="button" class="btn btn-link remove_image" id="' . $image->id .'">Remove</button>
             </div>
             ';

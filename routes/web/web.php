@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,4 @@ Route::get('com', function() {
     return view('components');
 });
 
-
+Route::post('email', 'EmailController@send')->name('email');
