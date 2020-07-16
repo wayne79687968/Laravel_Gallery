@@ -13,7 +13,7 @@
         <h3 class="panel-title">Select Image</h3>
     </div>
     <div class="panel-body">
-        <form action="{{ route('admin.gallery.upload') }}" class="dropzone" id="dropzoneForm">
+        <form action="{{ route('admin.gallery.upload') }}" class="dropzone" id="dropzoneForm" enctype="multipart/form-data">
             @csrf
         </form>
         <div align="center" class="mt-3">

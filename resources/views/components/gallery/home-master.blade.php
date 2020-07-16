@@ -51,7 +51,7 @@
         <x-gallery.gallery></x-gallery.gallery>
 
         {{-- Testimonial --}}
-        <x-gallery.testimonial></x-gallery.testimonial>
+        {{-- <x-gallery.testimonial></x-gallery.testimonial> --}}
 
         {{-- Biography --}}
         <x-gallery.biography></x-gallery.biography>

@@ -24,7 +24,11 @@ class PhotoController extends Controller
 
     public function upload(Request $request)
     {
-        $image = $request->file('file');
+        ini_set('memory_limit', "2000M");
+        $image = $request->file('file')->resize(null, 100, function ($constraint) {
+            // 等比例縮放
+            $constraint->aspectRatio();
+        });;
         $imagePath = time() . '.' . $image->extension();
         Photo::create([
             'path' => 'uploads/' . $imagePath,
